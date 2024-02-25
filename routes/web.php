@@ -19,8 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users',[UserController::class, 'users']);
+Route::get('people',[UserController::class, 'Users']);
 
-Route::get('user/{$user}',function(){
-    return view('user');
-});
+Route::get('people/{id}',[UserController::class, 'User']);
+
+Route::get('people/edit/{id}',[UserController::class, 'UserEdit']);
+
+
+
+
