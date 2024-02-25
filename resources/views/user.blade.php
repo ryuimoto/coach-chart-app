@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>ユーザー詳細</h1> 
+   <h1>ユーザー詳細</h1>
+
+   
 </body>
 </html>
