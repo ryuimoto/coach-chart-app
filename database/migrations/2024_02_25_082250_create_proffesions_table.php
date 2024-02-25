@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('proffesions', function (Blueprint $table) {
             $table->id();
+            $table->integer('profession_id');
+            $table->string('profession_name',100);
             $table->timestamps();
         });
     }
