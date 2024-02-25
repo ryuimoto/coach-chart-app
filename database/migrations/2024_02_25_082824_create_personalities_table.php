@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('personalities', function (Blueprint $table) {
             $table->id();
+            $table->integer('personality_id');
+            $table->string('personality_features',100);
             $table->timestamps();
         });
     }
