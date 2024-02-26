@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('people',[UserController::class, 'Users']);
 
-Route::get('people/{id}',[UserController::class, 'User']);
+Route::get('people/{id}',[UserController::class, 'User'])->name('user_detail');
 
 Route::get('people/edit/{id}',[UserController::class, 'UserEdit']);
 

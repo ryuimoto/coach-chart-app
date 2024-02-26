@@ -10,10 +10,12 @@ class UserController extends Controller
     public function Users(){
         $users = User::get();
 
-        return view('users',$users);
+        return view('users',['users' => $users]);
     }
 
-    public function User($id){
+    public function User(User $user){
+        dd($user);
+
         return view('user');
     }
 
