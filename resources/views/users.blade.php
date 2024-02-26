@@ -12,12 +12,12 @@
     <ul>
         @forelse ($users as $user)
             <li>
-                <div class="content"><a href="{{ route('user_detail',['id' => $user]) }}">{{ $user->first_name }}{{ $user->last_name }}</a></div>
-                <div class="content"><a href="">{{ $user->age }}</a></div>
+                <div class="content"><a href="{{ route('user_detail',['user' => $user]) }}">{{ $user->first_name }}{{ $user->last_name }}</a></div>
+                <div class="content"><a href="{{ route('user_detail',['user' => $user]) }}">{{ $user->age }}</a></div>
+                <button class="delete-btn">削除</button>
             </li>
         @empty
         @endforelse
     </ul>
-    
 </body>
 </html>

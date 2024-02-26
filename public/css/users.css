@@ -33,3 +33,14 @@ ul li::before {
 .content {
     padding: 0 20px; /* 縦線とテキストの間隔 */
 }
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background-color: darkred;
+}
