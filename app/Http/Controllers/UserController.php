@@ -18,8 +18,8 @@ class UserController extends Controller
         return view('user',['user' => $user]);
     }
 
-    public function UserEdit($id){
-        return view('user_edit');
+    public function UserEdit(User $user){
+        return view('user_edit',['user' => $user]);
     }
 
     

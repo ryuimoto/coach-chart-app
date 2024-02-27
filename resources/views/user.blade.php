@@ -42,7 +42,7 @@
         </tbody>
     </table>
     <br>
-    <button>戻る</button>
-    <button>編集</button>
+    <button type="button" onclick="location.href='{{ route('users') }}' ">戻る</button>
+    <button type="button" onclick="location.href='{{ route('user_edit',['user' => $user]) }}' ">編集</button>
 </body>
 </html>

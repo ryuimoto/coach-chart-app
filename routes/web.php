@@ -19,11 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('people',[UserController::class, 'Users']);
+Route::get('people',[UserController::class, 'Users'])->name('users');
 
 Route::get('people/{user}',[UserController::class, 'User'])->name('user_detail');
 
-Route::get('people/edit/{id}',[UserController::class, 'UserEdit']);
+Route::get('people/edit/{user}',[UserController::class, 'UserEdit'])->name('user_edit');
 
 
 
