@@ -23,10 +23,10 @@ Route::get('people',[UserController::class, 'Users'])->name('users');
 
 Route::get('people/{user}',[UserController::class, 'User'])->name('user_detail');
 
-Route::get('people/edit/{user}',[UserController::class, 'UserEdit'])->name('user_edit');
+Route::get('create',[UserController::class, 'UserCreate'])->name('user_create');
+Route::post('create',[UserController::class, 'UserCreatePost']);
 
 
-
-
+Route::get('edit/{user}',[UserController::class, 'UserEdit'])->name('user_edit');
 
 

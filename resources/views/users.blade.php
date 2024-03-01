@@ -19,5 +19,6 @@
         @empty
         @endforelse
     </ul>
+    <button type="button" onclick="location.href='{{ route('user_create') }}' ">ユーザーの追加</button>
 </body>
 </html>
