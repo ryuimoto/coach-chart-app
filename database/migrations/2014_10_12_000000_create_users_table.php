@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('prefectures',50);
             $table->string('municipalities',50);
             $table->string('address',100);
+            $table->string('building_name');
             $table->integer('profession_id');
             $table->string('hobby',200);
             $table->integer('personality_id');

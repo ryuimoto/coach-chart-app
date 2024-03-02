@@ -32,9 +32,10 @@ class UserController extends Controller
             'municipalities' => 'required|max:50',
             'address' => 'required|max:100',
             'profession_id' => 'required|integer',
-            'hobby' => 'required|max:200',
+            'building_name' => 'required|max:50',
+            'hobby' => 'required|integer',
             'personality_id' => 'required|integer',
-            'other' => 'string|200',
+            'other' => 'string|max:100',
         ]);
 
         User::create([
@@ -44,6 +45,7 @@ class UserController extends Controller
             'prefectures' => $request->prefectures,
             'municipalities' => $request->municipalities,
             'address' => $request->address,
+            'building_name' => $request->building_name,
             'profession_id' => $request->profession_id,
             'hobby' => $request->hobby,
             'personality_id' => $request->personality_id,

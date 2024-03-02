@@ -24,6 +24,7 @@ class UserFactory extends Factory
             'prefectures' => '埼玉県',
             'municipalities' => 'さいたま市',
             'address' => '北区奈良町',
+            'building_name' => '別所ハイム',
             'profession_id' => 1,
             'hobby' => 'ふぇふぇf',
             'personality_id' => 1,

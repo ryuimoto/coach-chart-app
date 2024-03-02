@@ -23,61 +23,61 @@
                 <tr>
                     <th>名前</th>
                     <td>
-                        <input type="text" name="last_name" value="">
+                        <input type="text" name="last_name" value="{{ old('last_name') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>年齢</th>
                     <td>
-                        <input type="text" name="age" value="">
+                        <input type="text" name="age" value="{{ old('age') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>都道府県</th>
                     <td>
-                        <input type="text" name="prefectures" value="">
+                        <input type="text" name="prefectures" value="{{ old('prefectures') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>市区村長</th>
                     <td>
-                        <input type="text" name="municipalities" value="">
+                        <input type="text" name="municipalities" value="{{ old('municipalities') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>番地</th>
                     <td>
-                        <input type="text" name="address" value="">
+                        <input type="text" name="address" value="{{ old('address') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>建物名</th>
                     <td>
-                        <input type="text" name="profession_id" value="">
+                        <input type="text" name="profession_id" value="{{ old('building_name') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>仕事</th>
                     <td>
-                        <input type="text" name="hobby" value="">
+                        <input type="text" name="profession_id" value="{{ old('profession_id') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>趣味</th>
                     <td>
-                        <input type="text"  value="">
+                        <input type="text" name="hobby" value="{{ old('hobby') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>性格</th>
                     <td>
-                        <input type="text" value="">
+                        <input type="text" name="personality_id" value="{{ old('personality_id') }}">
                     </td>
                 </tr>
                 <tr>
                     <th>その他</th>
                     <td>
-                        <input type="text" value="">
+                        <input type="text" name="other" value="{{ old('other') }}">
                     </td>
                 </tr>
             </tbody>
