@@ -11,6 +11,15 @@
    <h1>ユーザー作成画面</h1>
     <form action="" method="POST" id="user_create">
         @csrf
+        <div>  
+            @if ($errors->any())  
+                <ul>  
+                    @foreach ($errors->all() as $error)  
+                        <li>{{ $error }}</li>  
+                    @endforeach  
+                </ul>  
+            @endif  
+        </div>
         <table class="sample_03">
             <tbody>
                 @csrf
