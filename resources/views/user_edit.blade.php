@@ -11,8 +11,15 @@
    <h1>ユーザー編集画面</h1>
    <table class="sample_03">
         <tbody>
-            <form action="" method="post">
+            <form method="post" id="user_edit">
                 @csrf
+                @if ($errors->any())  
+                    <ul>  
+                        @foreach ($errors->all() as $error)  
+                            <li>{{ $error }}</li>  
+                        @endforeach  
+                    </ul>  
+                @endif  
                 <tr>
                     <th>苗字</th>
                     <td>
@@ -84,6 +91,6 @@
     </table>
     <br>
     <button type="button" onclick="location.href='{{ route('users') }}' ">戻る</button>
-
+    <input type="submit" form="user_edit" value="編集">
 </body>
 </html>

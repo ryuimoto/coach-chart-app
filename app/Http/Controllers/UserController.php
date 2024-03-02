@@ -52,7 +52,6 @@ class UserController extends Controller
             'other' => $request->other,
         ]);
 
-
         return redirect()->route('users');
     }
 
@@ -63,8 +62,25 @@ class UserController extends Controller
         return view('user_edit',['user' => $user]);
     }
 
-    public function UserEditPost(User $user){
-        
+    public function UserEditPost(Request $request,User $user){
+        $request->validate([
+            'first_name' => 'required|max:50',
+            'last_name' => 'required|max:50',
+            'age' => 'required|integer',
+            'prefectures' => 'required|max:50',
+            'municipalities' => 'required|max:50',
+            'address' => 'required|max:100',
+            'profession_id' => 'required|integer',
+            'building_name' => 'required|max:50',
+            'hobby' => 'required|integer',
+            'personality_id' => 'required|integer',
+            'other' => 'string|max:100',
+        ]);
+
+
+        $user->update();
+
+        return back();
     }
 
     public function UserDelete(Request $request){

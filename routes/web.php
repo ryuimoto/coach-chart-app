@@ -29,11 +29,15 @@ Route::post('people',[UserController::class,'UserDelete'])->name('user_delete');
 // ユーザー詳細画面
 Route::get('people/{user}',[UserController::class, 'User'])->name('user_detail');
 
-// ユーザー作成が面
+// ユーザー編集画面
+Route::get('edit/{user}',[UserController::class, 'UserEdit'])->name('user_edit');
+Route::post('edit/{user}',[UserController::class, 'UserEditPost']);
+
+
+
+// ユーザー作成画面
 Route::get('create',[UserController::class, 'UserCreate'])->name('user_create');
 Route::post('create',[UserController::class, 'UserCreatePost']);
 
-// ユーザー編集画面
-Route::get('edit/{user}',[UserController::class, 'UserEdit'])->name('user_edit');
 
 

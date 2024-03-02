@@ -9,7 +9,7 @@
 </head>
 <body>
    <h1>ユーザー作成画面</h1>
-    <form action="" method="POST" id="user_create">
+    <form method="POST" id="user_create">
         @csrf
         <div>  
             @if ($errors->any())  
@@ -22,7 +22,6 @@
         </div>
         <table class="sample_03">
             <tbody>
-                @csrf
                 <tr>
                     <th>苗字</th>
                     <td>
