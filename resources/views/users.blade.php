@@ -14,7 +14,11 @@
             <li>
                 <div class="content"><a href="{{ route('user_detail',['user' => $user]) }}">{{ $user->first_name }}{{ $user->last_name }}</a></div>
                 <div class="content"><a href="{{ route('user_detail',['user' => $user]) }}">{{ $user->age }}</a></div>
-                <button class="delete-btn">削除</button>
+                <form action="{{ route('user_delete') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="user" value="{{ $user }}">
+                    <input type="submit" class="delete-btn" value="削除" onclick='return confirm("本当に削除しますか？")'>
+                </form>
             </li>
         @empty
         @endforelse

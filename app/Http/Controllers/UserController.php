@@ -53,7 +53,7 @@ class UserController extends Controller
         ]);
 
 
-        return back();
+        return redirect()->route('users');
     }
 
 
@@ -64,6 +64,16 @@ class UserController extends Controller
     }
 
     public function UserEditPost(User $user){
+        
+    }
+
+    public function UserDelete(Request $request){
+        $userObject = json_decode($request->user);
+        $user = User::where('id',$userObject->id)->first();
+
+        $user->delete();
+
+        return redirect()->route('users');
         
     }
 

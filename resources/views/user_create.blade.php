@@ -62,7 +62,7 @@
                 <tr>
                     <th>建物名</th>
                     <td>
-                        <input type="text" name="profession_id" value="{{ old('building_name') }}">
+                        <input type="text" name="building_name" value="{{ old('building_name') }}">
                     </td>
                 </tr>
                 <tr>
